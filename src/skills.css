@@ -1,5 +1,5 @@
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section {
+/* .section {
     padding: 6rem 0 2rem;
   }
   
@@ -17,10 +17,10 @@
   .section__title,
   .section__subtitle {
     text-align: center;
-  }
+  } */
   
   /*=============== LAYOUT ===============*/
-  .container {
+  /* .container {
     max-width: 968px;
     margin-left: auto;
     margin-right: auto;
@@ -84,4 +84,4 @@
     font-size: 13px;
     font-weight: bold;
     line-height: 18px;
-}
+} */

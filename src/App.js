@@ -1,6 +1,6 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/Navbar";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { NavBar } from "./components/Navbar/Navbar";
 import { Banner } from "./components/Banner";
 import { Myskills } from "./components/Myskills";
 import { Projects } from "./components/Projects";
@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
+      {/* <Banner /> */}
       {/* <Myskills /> */}
-      <Projects />
-      <Contact />
-      <Footer />
+      {/* <Projects /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

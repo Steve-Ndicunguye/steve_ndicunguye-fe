@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { onUpdateActiveLink } from "./Navbar"
+import { onUpdateActiveLink } from "./Navbar/Navbar"
 import headerImg from "../assets/img/steveImage3.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
