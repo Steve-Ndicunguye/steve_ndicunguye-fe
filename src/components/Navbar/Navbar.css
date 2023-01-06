@@ -11,15 +11,17 @@ nav.navbar {
     transition:  0.32s ease-in-out;
     background-color: rgba(0,0,0,0.4);
   }
+  
   nav.navbar.scrolled {
     padding: 0px 30px;
     background-color: #121212;
   }
+
   a.myLogo {
       width: 9%;
       color: white;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 25px;
       display: flex;
       align-items: center;
       text-decoration: none !important;
@@ -173,10 +175,99 @@ nav.navbar {
 
   /************ Navbar responsiveness ************/
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 1112px){
+    .twitterIcon {
+      display: none !important;
+  }
+  }
 
+  @media (max-width: 1066px){
+    .linkedlinIcon {
+      display: none !important;
+  }
+  }
+
+  @media (max-width: 1020px){
+    .navbar-text button {
+      padding: 15px 11px;
+  }
+  }
+
+  @media (max-width: 992px) {
+
+    .navbar-brand{
+      display: none;
+    }
+
+    .navbar>.container{
+      display: grid;
+    }
+
+    .navbar-text button {
+      padding: 15px 25px;
+  }
+
+    .linkedlinIcon {
+      display: block !important;
+      display: inline-flex !important;
+  }
+
+    .twitterIcon {
+      display: block !important;
+      display: inline-flex !important;
+  }
+
+  .container {
+    padding-right: unset !important;
+    padding-left: unset !important;
+}
+
+  .social-icon {
+    display: inline-block;
+    display: flex;
+    gap: 15px;
+    margin-left: 30px !important;
+  }
+
+  .navbar-text button{
+    margin-left: 40px !important;
+  }
+
+  .ms-auto{
+    display: flex !important;
+    gap: 20px;  
+  }
+
+    }
+
+    @media (max-width: 943px){
+      .twitterIcon {
+        display: none !important;
+    }
+    }
+
+    @media (max-width: 882px){
+      .linkedlinIcon {
+        display: none !important;
+    }
+    }
+
+    @media (max-width: 821px){
+      .githubIcon {
+        display: none !important;
+    }
+
+    .navbar-text button{
+      margin-left: 30px !important;
+    }
+    }
+
+
+  
+
+  @media only screen and (max-width: 767px) {
         nav.navbar {
-            padding: 5px 12px;
+            padding: 12px 12px;
             position: fixed;
             width: 100% ;
             top: 0;
@@ -185,8 +276,17 @@ nav.navbar {
             background-color: rgba(0,0,0,0.4);
         }
         nav.navbar.scrolled {
-            padding: 0px 12px;
+            padding: 7px 12px;
             background-color: #121212;
+        }
+
+
+        .navbar-brand{
+          display: block;
+        }
+
+        .navbar>.container{
+          display: unset;
         }
 
         a.myLogo {
@@ -194,6 +294,37 @@ nav.navbar {
             justify-content: space-between;
             width: 100%;
             
+        }
+
+        .linkedlinIcon {
+          display: block !important;
+          display: inline-flex !important;
+      }
+    
+        .twitterIcon {
+          display: block !important;
+          display: inline-flex !important;
+      }
+
+        .githubIcon {
+          display: block !important;
+          display: inline-flex !important;
+      }
+
+        .hideLogo{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        nav.navbar .navbar-toggler-icon {
+          width: 25px;
+          margin-bottom: -4px;
+      }
+
+        .container{
+          padding-right: calc(var(--bs-gutter-x) * .5) !important;
+          padding-left: calc(var(--bs-gutter-x) * .5) !important;
         }
 
         #basic-navbar-nav{
@@ -243,7 +374,25 @@ nav.navbar {
           display: block;
         }
 
+        .social-icon {
+          display: inline-block;
+          display: flex;
+          gap: 15px;
+          margin-left: 14px !important;
+        }
+      
+        .navbar-text button{
+          margin-left: 0px !important;
+        }
+      
+
         
+  }
+
+  @media only screen and (max-width: 415px){
+    nav.navbar .navbar-toggler-icon {
+      width: 26px;
+  }
   }
 
   

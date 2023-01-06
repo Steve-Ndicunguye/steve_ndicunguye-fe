@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { onUpdateActiveLink } from "./Navbar/Navbar"
-import headerImg from "../assets/img/steveImage3.png";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { onUpdateActiveLink } from "../Navbar/Navbar"
+import headerImg from "../../assets/img/steveImage3.png";
+import { BsFillCursorFill } from 'react-icons/bs';
 import 'animate.css';
+import './Banner.css'
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -58,10 +60,10 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 {/* <span className="tagline">Welcome to my Portfolio</span> */}
                 <h1>{`Hi! I'm Steve,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full-Stack Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am someone who want to be judged by individual performance and be rewarded for my efforts.
-                    I think positively and can execute on difficult tasks. Every day I work to improve myself and my skills, which is part of maturing and becoming better at what I do.
+                  <p> <span className="personality">A bit on my personality</span>: I am passionate about everything that goes into creating websites and apps. I am someone who always want to be judged by individual performance and be rewarded for my efforts. 
+                  Every day I work hard to improve myself and my skills, which is part of maturing and becoming better at what I do.
                   </p>
-                  <button onClick={() => console.log('connect')} to='#connect'>Hire me <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')} to='#connect' className="hireMe">Hire me <BsFillCursorFill size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>

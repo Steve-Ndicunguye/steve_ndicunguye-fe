@@ -38,10 +38,11 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className="hideLogo">
             <a href="#" className="myLogo">Steve Ndicunguye</a>
+            <span className="navbar-toggler-icon" onClick={() => setOpened(true)}></span>
           </Navbar.Brand>
-          <span className="navbar-toggler-icon" onClick={() => setOpened(true)}></span>
+          
           <Navbar.Collapse id="basic-navbar-nav" className={opened ? "opened" : ""}>
             <Nav className="ms-auto">
               <Nav.Link href="#home" className="closeButton" onClick={() => setOpened(false)}><img src={closeButton} alt="" /></Nav.Link>
@@ -52,9 +53,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-              <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+              <a href="#" className="githubIcon"><img src={navIcon2} alt="" /></a>
+                <a href="#" className="linkedlinIcon"><img src={navIcon1} alt="" /></a>
+                <a href="#" className="twitterIcon"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink>
                 <button className="vvd"><span>Visit my Blog</span></button>
