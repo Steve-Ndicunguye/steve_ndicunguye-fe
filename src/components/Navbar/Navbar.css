@@ -92,11 +92,11 @@ nav.navbar {
       filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
   }
   .navbar-text button {
-    font-style: italic;
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
-    padding: 15px 25px;
+    padding: 12px 25px;
+    border-radius: 30px;
     font-size: 18px;
     margin-left: 18px;
     position: relative;
@@ -108,12 +108,13 @@ nav.navbar {
   }
   .navbar-text button::before {
     content: "";
-    width: 0%;
-    height: 100%;
+    width: 100%;
+    height: 0%;
     position: absolute;
+    border-radius: 30px;
     background-color: #fff;
     left: 0;
-    top: 0;
+    bottom: 0;
     z-index: -1;
     transition: 0.3s ease-in-out;
   }
@@ -189,7 +190,7 @@ nav.navbar {
 
   @media (max-width: 1020px){
     .navbar-text button {
-      padding: 15px 11px;
+      padding: 12px 25px;
   }
   }
 
@@ -204,7 +205,7 @@ nav.navbar {
     }
 
     .navbar-text button {
-      padding: 15px 25px;
+      padding: 12px 25px;
   }
 
     .linkedlinIcon {
@@ -329,7 +330,7 @@ nav.navbar {
 
         #basic-navbar-nav{
             position: absolute;
-            background-image: url(../../assets/img/banner-bg.png);
+            background-image: url(../../assets/img/banner-bg1.jpg);
             background-repeat: no-repeat;
             background-size:cover;
             top: 0;
@@ -383,6 +384,11 @@ nav.navbar {
       
         .navbar-text button{
           margin-left: 10px !important;
+          border-radius: 0px;
+        }
+
+        .navbar-text button::before {
+          border-radius: 0px;
         }
       
 

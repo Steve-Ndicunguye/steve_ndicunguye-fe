@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../../assets/img/hireMe.png";
 import 'animate.css';
+import './Contact.css'
 import TrackVisibility from 'react-on-screen';
 
 export const Contact = () => {
@@ -58,7 +59,7 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2>Get In Touch</h2>
+                {/* <h2>Fill the form below to hire me</h2> */}
                 <form>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
