@@ -6,15 +6,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    align-self: center;
   }
   
   .banner .tagline {
     font-weight: 700;
     letter-spacing: 0.8px;
-    padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: 20px;
+    font-size: 50px;
     margin-bottom: 16px;
     display: inline-block;
   }
@@ -32,7 +30,7 @@
     letter-spacing: 0.8px;
     line-height: 1.5em;
     text-align: justify;
-    width: 96%;
+    width: 100%;
   }
 
   .banner .personality{
@@ -95,7 +93,7 @@
     margin-left: 15px;
   }
   .banner img {
-    margin-top: -47px;
+    margin-top: -31px;
     animation: updown 3s linear infinite;
   }
   @keyframes updown {
@@ -111,6 +109,14 @@
   }
   .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
+  }
+
+  .txt-rotate{
+    display: block;
+  }
+
+  .txt-rotate-name{
+    display: block;
   }
 
 

@@ -1,0 +1,155 @@
+.About {
+    padding: 40px 50px 80px;
+    position: relative;
+    background-color: black;
+  }
+
+  .About h2 {
+      font-size: 45px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      text-align: center;
+  }
+
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__me{
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%);
+    display: grid;
+    place-items: center;
+}
+
+.about__me-image{
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(-10deg);
+    transition: transform 1s;
+}
+
+.about__me-image:hover{
+    transform: rotate(0deg);  
+}
+
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about__card{
+    background:linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about__card:hover{
+    background: transparent;
+    border-color: #01182b;
+    cursor: default;
+}
+
+.about__icon{
+    color: linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.download__button{
+  text-decoration: none;
+  color: #fef4f5;
+  background: linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%);
+  padding: 12px 20px;
+  border-radius: 0px 10px 0px 10px;
+}
+
+.download__button:hover{
+    color: #fef4f5;
+}
+
+.download__icon{
+    font-size: 1.4rem; 
+    padding-bottom: 0.2rem;
+}
+
+.about__card h5{
+    font-size: 0.95rem;
+}
+
+.about__card small{
+    font-size: 0.7rem;
+    color: #fef4f5;
+}
+
+.about__content p{
+    margin: 2rem 0 2.6rem;
+    line-height: 1.5rem;
+    color: #fef4f5;
+}
+
+.downloadCvButton{
+    background: linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%);
+    border-color: linear-gradient(90.21deg, #111111 -5.91%, #01182b 111.58%) !important;
+}
+
+
+@media (max-width: 1024px){
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .about__content p{
+        margin: 1rem 0 1.5rem;
+    }
+
+  }
+
+@media (max-width: 600px){
+
+    .About{
+        padding: 40px 30px 80px;
+    }
+
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me{
+        width: 100%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards{
+        display: none;
+    }
+
+    .about__content{
+        text-align: justify;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .about__content p{
+        margin: 1.5rem 0;
+    }
+
+  }
+

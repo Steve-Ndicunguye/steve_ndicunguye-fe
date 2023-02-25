@@ -14,7 +14,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full-Stack Web Developer", "Mobile App Developer" ];
+  const toRotate = [ "Web Developer", "Mobile App Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -58,11 +58,8 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                {/* <span className="tagline">Welcome to my Portfolio</span> */}
-                <h1>{`Hi! I'm Steve,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full-Stack Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p> <span className="personality">A bit on my personality</span>: I am passionate about everything that goes into creating websites and apps. I am someone who always want to be judged by individual performance and be rewarded for my efforts. 
-                  Everyday I work hard to improve myself and my skills, which is part of maturing and becoming better at what I do.
-                  </p>
+                <span className="tagline">👋</span>
+                <h1>{`Hi,`} <span className="txt-rotate-name">I'm Steve,</span> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <button onClick={() => console.log('connect')} to='#connect' className="hireMe">Hire me <BsFillCursorFill size={25} /></button>
               </div>}
             </TrackVisibility>
