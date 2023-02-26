@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact/Contact";
 import { Nav } from "./components/FloatingNav/Nav"
 import { Footer } from "./components/Footer/Footer"
 import { PopupBox } from "./components/PopupBox/PopupBox"
+import { AwaitingBlog } from "./components/PopupBox/AwaitingBlog"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Footer />
       <Nav />
       <PopupBox />
+      <AwaitingBlog />
     </div>
   );
 }

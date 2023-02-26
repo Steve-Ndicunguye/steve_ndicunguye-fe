@@ -5,6 +5,7 @@ import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.svg';
 import navIcon3 from '../../assets/img/nav-icon3.svg';
 import closeButton from '../../assets/img/closeButton.png';
+import { AwaitingBlog }from "../PopupBox/AwaitingBlog";
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -15,6 +16,7 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [opened, setOpened] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -34,6 +36,10 @@ export const NavBar = () => {
     setActiveLink(value);
   }
 
+  const closePopup = () => {
+      setIsOpen(false);
+    };
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -42,7 +48,7 @@ export const NavBar = () => {
             <a href="#" className="myLogo">Steve Ndicunguye</a>
             <span className="navbar-toggler-icon" onClick={() => setOpened(true)}></span>
           </Navbar.Brand>
-          
+          <AwaitingBlog isOpen={isOpen} onClose={closePopup} />
           <Navbar.Collapse id="basic-navbar-nav" className={opened ? "opened" : ""}>
             <Nav className="ms-auto">
               <Nav.Link href="#" className="closeButton" onClick={() => setOpened(false)}><img src={closeButton} alt="" /></Nav.Link>
@@ -58,13 +64,14 @@ export const NavBar = () => {
                 <a href="#" className="twitterIcon"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink>
-                <button className="vvd"><span>Visit my Blog</span></button>
+                <button className="vvd" onClick={() => setIsOpen(true)}><span>Visit my Blog</span></button>
               </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Router>
+    
   )
 }
 

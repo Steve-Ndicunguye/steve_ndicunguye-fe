@@ -22,7 +22,7 @@
   }
   
   .popupBox img{
-    width: 100px;
+    width: 100px !important;
     margin-top: -50px;
   }
   .popupBox h2{
@@ -49,4 +49,11 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+
+  @media only screen and (max-width: 600px){
+    .popupBox{
+      width: 330px;
+      }
   }
