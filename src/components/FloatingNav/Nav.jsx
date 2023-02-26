@@ -10,11 +10,11 @@ export const Nav = () => {
     const [activeNav, setActiveNav] = useState('#')
   return (
     <nav className="floatingNav">
-        <a href="#" onclick={() => setActiveNav('#')} className={activeNav === '#' ? 'active': ''}><AiOutlineHome /></a>
-        <a href="#about" onclick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active': ''}><AiOutlineUser /></a>
-        <a href="#skills" onclick={() => setActiveNav('#skills')} className={activeNav === '#skills' ? 'active': ''}><GiGiftOfKnowledge /></a>
-        <a href="#project" onclick={() => setActiveNav('#project')} className={activeNav === '#project' ? 'active': ''}><BiBook /></a>
-        <a href="#connect" onclick={() => setActiveNav('#connect')} className={activeNav === '#connect' ? 'active': ''}><BiMessageSquareDetail /></a>
+        <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active': ''}><AiOutlineHome /></a>
+        <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active': ''}><AiOutlineUser /></a>
+        <a href="#skills" onClick={() => setActiveNav('#skills')} className={activeNav === '#skills' ? 'active': ''}><GiGiftOfKnowledge /></a>
+        <a href="#project" onClick={() => setActiveNav('#project')} className={activeNav === '#project' ? 'active': ''}><BiBook /></a>
+        <a href="#connect" onClick={() => setActiveNav('#connect')} className={activeNav === '#connect' ? 'active': ''}><BiMessageSquareDetail /></a>
     </nav>
   )
 }

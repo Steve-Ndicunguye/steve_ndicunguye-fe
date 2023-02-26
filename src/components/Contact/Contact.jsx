@@ -1,48 +1,33 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../../assets/img/hireMe.png";
+import { PopupBox }from "../PopupBox/PopupBox";
 import 'animate.css';
 import './Contact.css'
 import TrackVisibility from 'react-on-screen';
+import emailjs from '@emailjs/browser';
+
 
 export const Contact = () => {
-//   const formInitialDetails = {
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     phone: '',
-//     message: ''
-//   }
-//   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+  const form = useRef()
 
-//   const onFormUpdate = (category, value) => {
-//       setFormDetails({
-//         ...formDetails,
-//         [category]: value
-//       })
-//   }
+  const closePopup = () => {
+    setIsOpen(false);
+  };
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setButtonText("Sending...");
-//     let response = await fetch("http://localhost:5000/contact", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json;charset=utf-8",
-//       },
-//       body: JSON.stringify(formDetails),
-//     });
-//     setButtonText("Send");
-//     let result = await response.json();
-//     setFormDetails(formInitialDetails);
-//     if (result.code == 200) {
-//       setStatus({ succes: true, message: 'Message sent successfully'});
-//     } else {
-//       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-//     }
-//   };
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_a635f9k', 'template_brj0cpf', form.current, 'ezr0s7-hsaD06nARD')
+      .then((result) => {
+          console.log(result.text);
+          setIsOpen(true);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   return (
     <section className="contact" id="connect">
@@ -60,32 +45,27 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 {/* <h2>Fill the form below to hire me</h2> */}
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text"  placeholder="First Name"  />
+                      <input type="text"  placeholder="First Name" name="user_firstName" />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text"  placeholder="Last Name" />
+                      <input type="text"  placeholder="Last Name" name="user_lastName"/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email"  placeholder="Email Address"  />
+                      <input type="email"  placeholder="Email Address" name="user_email" />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel"  placeholder="Phone No." />
+                      <input type="tel"  placeholder="Phone No." name="user_phoneNumber"/>
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6"  placeholder="Message" ></textarea>
-                      <button type="submit"><span>{buttonText}</span></button>
+                      <textarea rows="6"  placeholder="Message" name="message"></textarea>
+                      <button type="submit" onClick={() =>  setButtonText('Sending...')}><span>{buttonText}</span></button>
                     </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
                   </Row>
                 </form>
+                <PopupBox isOpen={isOpen} onClose={closePopup} />
               </div>}
             </TrackVisibility>
           </Col>

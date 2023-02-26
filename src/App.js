@@ -8,6 +8,7 @@ import { Projects } from "./components/Projects/Projects";
 import { Contact } from "./components/Contact/Contact";
 import { Nav } from "./components/FloatingNav/Nav"
 import { Footer } from "./components/Footer/Footer"
+import { PopupBox } from "./components/PopupBox/PopupBox"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Contact />
       <Footer />
       <Nav />
+      <PopupBox />
     </div>
   );
 }

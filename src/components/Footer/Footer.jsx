@@ -27,7 +27,7 @@ export const Footer = () => {
         <li><a href="#" className="">Blog</a></li>
         <li><a href="#" className="">Contact</a></li>
       </ul>
-      <p footerCopyRight>&copy; 2023 Steve Ndicunguye | All rights reserved.</p>
+      <p className = "footerCopyRight">&copy; 2023 Steve Ndicunguye | All rights reserved.</p>
     </footer>
       
   );
