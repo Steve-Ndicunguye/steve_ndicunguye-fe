@@ -32,6 +32,12 @@
     color: #fef4f5;
 }
 
+@media (max-width: 600px){
+    .floatingNav{
+        bottom: 1rem;
+    }
+}
+
 @media (max-width: 340px){
     .floatingNav{
         gap: 0.2rem;
