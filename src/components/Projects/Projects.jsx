@@ -12,8 +12,8 @@ export const Projects = () => {
   const [personalProjects, setPersonalProjects] = useState([]);
 
   useEffect(() => {
-    const clientsProjectsQuery = '*[_type == "clientsProjects"]';
-    const personalProjectsQuery = '*[_type == "personalProjects"]';
+    const clientsProjectsQuery = '*[_type == "clientsProjects"] | order(_createdAt desc)';
+    const personalProjectsQuery = '*[_type == "personalProjects"] | order(_createdAt desc)';
 
     client.fetch(clientsProjectsQuery).then((data) => {
       setClientsProjects(data);
