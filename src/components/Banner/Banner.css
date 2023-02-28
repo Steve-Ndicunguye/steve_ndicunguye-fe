@@ -16,6 +16,10 @@
     margin-bottom: 16px;
     display: inline-block;
   }
+
+  .bannerToConnect{
+    text-decoration: none;
+  }
   .banner h1 {
     font-size: 60px;
     font-weight: 700;
@@ -92,10 +96,14 @@
   .banner button:hover svg {
     margin-left: 15px;
   }
+
   .banner img {
-    margin-top: -31px;
+    margin: auto auto auto 90px;
+    width: 70%;
+    justify-self: center;
     animation: updown 3s linear infinite;
   }
+
   @keyframes updown {
       0% {
           transform: translateY(-20px);
@@ -122,7 +130,7 @@
 
   @media (max-width: 1025px){
     .banner img {
-        margin-top: 0px;
+        /* margin-top: 0px; */
       }
       .banner {
         padding: 150px 30px 100px 30px;
@@ -130,7 +138,6 @@
   }
 
   @media (max-width: 992px){
-    
 
     .col-md-6 {
         flex: 0 0 auto;
@@ -139,8 +146,7 @@
     
 
     .banner img {
-        width: 80%;
-        margin: 0px auto auto auto;
+        display: none;
       }
   }
 
@@ -159,10 +165,6 @@
         display: block;
       }
 
-      .banner img {
-        width: 100%;
-        margin-top: 20px;
-      }
   }
 
 

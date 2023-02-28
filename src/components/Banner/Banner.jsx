@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { onUpdateActiveLink } from "../Navbar/Navbar"
-import headerImg from "../../assets/img/steveImage3.png";
+import headerImg from "../../assets/img/bannerImage.png";
 import { BsFillCursorFill } from 'react-icons/bs';
 import 'animate.css';
 import './Banner.css'
@@ -53,14 +53,14 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">👋</span>
                 <h1>{`Hi,`} <span className="txt-rotate-name">I'm Steve,</span> <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <button onClick={() => console.log('connect')} to='#connect' className="hireMe">Hire me <BsFillCursorFill size={25} /></button>
+                <a href="#connect" className="bannerToConnect"> <button onClick={() => console.log('connect')} to='#connect' className="hireMe">Hire me <BsFillCursorFill size={25} /></button> </a>
               </div>}
             </TrackVisibility>
           </Col>

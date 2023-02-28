@@ -44,12 +44,11 @@ nav.navbar {
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 18px;
-    /* opacity: 0.75; */
   }
-  /* nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+  nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
   nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-      opacity: 1;
-  } */
+      color: #01182b ;
+  }
   span.navbar-text {
       display: flex;
       align-items: center;

@@ -50,7 +50,7 @@ export const NavBar = () => {
           </Navbar.Brand>
           <AwaitingBlog isOpen={isOpen} onClose={closePopup} />
           <Navbar.Collapse id="basic-navbar-nav" className={opened ? "opened" : ""}>
-            <Nav className="ms-auto">
+            <Nav className="ms-auto" onClick={() => setOpened(false)}>
               <Nav.Link href="#" className="closeButton" onClick={() => setOpened(false)}><img src={closeButton} alt="" /></Nav.Link>
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#about" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>About</Nav.Link>
@@ -59,9 +59,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-              <a href="#" className="githubIcon"><img src={navIcon2} alt="" /></a>
-                <a href="#" className="linkedlinIcon"><img src={navIcon1} alt="" /></a>
-                <a href="#" className="twitterIcon"><img src={navIcon3} alt="" /></a>
+              <a href="https://github.com/ste3ve3" target="_blank" rel="noreferrer" className="githubIcon"><img src={navIcon2} alt="" /></a>
+                <a href="https://www.linkedin.com/in/steve-ndicunguye-89bb6822b/" target="_blank" rel="noreferrer" className="linkedlinIcon"><img src={navIcon1} alt="" /></a>
+                <a href="https://twitter.com/did3rot" target="_blank" rel="noreferrer" className="twitterIcon"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink>
                 <button className="vvd" onClick={() => setIsOpen(true)}><span>Visit my Blog</span></button>

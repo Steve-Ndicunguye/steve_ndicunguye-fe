@@ -35,12 +35,12 @@ export const Projects = () => {
                 <h2>My Projects</h2>
                 <p></p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center " id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">For Clients</Nav.Link>
+                      <Nav.Link eventKey="first"><span className = "makeProjectsTitleDisappear">For</span> Clients</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Personal Projects</Nav.Link>
+                      <Nav.Link eventKey="second">Personal <span className = "makeProjectsTitleDisappear">Projects</span></Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
