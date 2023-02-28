@@ -14,7 +14,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Mobile App Developer" ];
+  const toRotate = [ "FullStack Web Developer", "Mobile App Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">👋</span>
-                <h1>{`Hi,`} <span className="txt-rotate-name">I'm Steve,</span> <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi,`} <span className="txt-rotate-name">I'm Steve,</span> <span className="txt-rotate" dataperiod="1000" data-rotate='[ "FullStack Web Developer", "Mobile App Developer" ]'><span className="wrap">{text}</span></span></h1>
                 <a href="#connect" className="bannerToConnect"> <button onClick={() => console.log('connect')} to='#connect' className="hireMe">Hire me <BsFillCursorFill size={25} /></button> </a>
               </div>}
             </TrackVisibility>
